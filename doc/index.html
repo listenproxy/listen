@@ -1,0 +1,64 @@
+<!--
+ * @Author: lisong
+ * @Date: 2021-03-16 15:19:13
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Listen</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="./css/jy-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/frame.css">
+    <script src="./js/jyui.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/frame.js"></script>
+    <!--[if lt IE 9]>
+    <style>
+        .jy-tab-header {
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="jy-header">
+        <a class="logo" href="https://listen-proxy.com">
+            <img src="../favicon.ico" class="logo-icon">
+            <span class="app-name">Listen</span>
+        </a>
+        <div class="jy-header-right">
+            <ul class="jy-menu jy-menu-nav jy-menu-nav-horizontal">
+                <li class="jy-menu-checked"><a href="javascript:;" title="栅格" url="">文档</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="jy-side-menu">
+        <div class="jy-side-scroll">
+            <ul class="jy-menu jy-menu-nav">
+                <li><a href="javascript:;" title="介绍" url="home.html">介绍</a></li>
+                <li><a href="javascript:;" title="功能布局" url="layout.html">功能布局</a></li>
+                <li><a href="javascript:;" title="安装证书" url="install_ssl.html">安装证书</a></li>
+                <li><a href="javascript:;" title="简单使用" url="start.html">简单使用</a></li>
+                <li><a href="javascript:;" title="网关" url="gateway.html">网关</a></li>
+                <li><a href="javascript:;" title="镜像" url="mirror.html">镜像</a></li>
+                <li><a href="javascript:;" title="映射" url="map.html">映射</a></li>
+                <li><a href="javascript:;" title="重写" url="rewrite.html">重写</a></li>
+                <li><a href="javascript:;" title="断点" url="break.html">断点</a></li>
+                <li><a href="javascript:;" title="脚本" url="script.html">脚本</a></li>
+                <li><a href="javascript:;" title="Websocket" url="websocket.html">Websocket</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="jy-frame-container">
+        <div id="tab"></div>
+    </div>
+</body>
+<script type="text/javascript">
+    JyUi.Frame.init();
+</script>
+
+</html>

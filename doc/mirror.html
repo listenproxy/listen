@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>镜像</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="./css/frame.css">
+</head>
+
+<body>
+  <div class="jy-content">
+    <div class="jy-content-header">
+      <div class="jy-content-title">镜像</div>
+    </div>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">功能</legend>
+      <div class="jy-field-box">
+        <blockquote>
+          镜像功能可以将请求的域名替换为指定的域名，从而实现请求的重定向。效果类似于修改hosts文件，但更为方便快捷。
+        </blockquote>
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">开启镜像功能</legend>
+      <div class="jy-field-box">
+        将鼠标悬浮到镜像图标上，点击“启动镜像”按钮即可开启镜像功能。
+        <br />
+        <img src="img/mirror/镜像1.png">
+        <br />
+        <br />
+        开启后，镜像图标会高亮显示，表示镜像已开启。
+        <br />
+        <img src="img/mirror/镜像2.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">新增镜像规则</legend>
+      <div class="jy-field-box">
+        1、将鼠标悬浮到镜像图标上，点击“规则管理”按钮打开镜像规则列表。
+        <br />
+        <img src="img/mirror/镜像3.png">
+        <br />
+        <br />
+        2、在规则列表弹框里，点击“+”按钮，打开新增规则弹窗。<br />
+        <img src="img/mirror/镜像4.png">
+        <br />
+        <br />
+        3、在弹窗里，填写匹配规则、镜像，点击“确定”按钮即可新增规则。匹配规则支持wildcard。
+        <br />
+        <img src="img/mirror/镜像5.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">替换关键头部</legend>
+      <div class="jy-field-box">
+        镜像功能支持替换请求头部的Host、Origin和Referer字段，确保请求能够被服务器正确响应（有些服务器会校验这些字段，如果和镜像域名不一致会阻止响应）。
+        <br />
+        <img src="img/mirror/镜像6.png">
+      </div>
+    </fieldset>
+  </div>
+</body>
+
+</html>

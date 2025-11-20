@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>断点</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="./css/frame.css">
+</head>
+
+<body>
+  <div class="jy-content">
+    <div class="jy-content-header">
+      <div class="jy-content-title">断点</div>
+    </div>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">功能</legend>
+      <div class="jy-field-box">
+        <blockquote>
+          断点功能可以在请求发送到服务器之前或响应返回给客户端之前暂停请求，从而实现对请求和响应的手动检查和修改。
+        </blockquote>
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">开启断点功能</legend>
+      <div class="jy-field-box">
+        将鼠标悬浮到断点图标上，点击“启动断点”按钮即可开启断点功能。
+        <br />
+        <img src="img/break/断点1.png">
+        <br />
+        <br />
+        开启后，断点图标会高亮显示，表示断点已开启。
+        <br />
+        <img src="img/break/断点2.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">新增断点规则</legend>
+      <div class="jy-field-box">
+        1、将鼠标悬浮到断点图标上，点击“规则管理”按钮打开断点规则列表。
+        <br />
+        <img src="img/break/断点3.png">
+        <br />
+        <br />
+        2、在规则列表弹框里，点击“+”按钮，打开新增规则弹窗。
+        <br />
+        <img src="img/break/断点4.png">
+        <br />
+        <br />
+        3、在弹窗里，填写匹配规则、断点类型，点击“确定”按钮即可新增规则。匹配规则支持wildcard。
+        <br />
+        <img src="img/break/断点5.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">断点类型</legend>
+      <div class="jy-field-box">
+        断点类型可以选择请求断点或响应断点两种方式。
+        <br />
+        <span style="font-weight: bold;">请求断点：</span>在请求发送到服务器之前暂停请求，允许用户检查和修改请求内容，然后手动继续请求发送到服务器。
+        <br />
+        <span style="font-weight: bold;">响应断点：</span>在响应返回给客户端之前暂停响应，允许用户检查和修改响应内容，然后手动继续响应返回给客户端。
+        <br />
+        例：请求URL为“https://www.baidu.com/”，以下配置在浏览器发起请求后，浏览器会挂起等待。
+        <br />
+        <img src="img/break/断点6.png">
+        此时打开Listen客户端，选择“执行断点”按钮，将会看到断点执行器中的列表里包含了该请求，点击该请求即可查看和修改请求内容，此时可以手动修改请求的方法、路径、参数、请求头、请求体，修改完成后点击“执行”按钮即可将请求发送到服务器，等待服务器响应返回后，浏览器会继续加载页面。
+        <img src="img/break/断点7.png">
+        <br />
+        <img src="img/break/断点8.png">
+        <br />
+        <br />
+        如果不想手动去打开执行器，可以在断点菜单里勾选“自动弹出”选项，这样当请求命中断点规则时，执行器会自动打开，方便用户查看和修改请求内容。
+        <img src="img/break/断点9.png">
+        <br>
+        <br>
+        响应断点的使用方法和请求断点一样，只不过是对服务器返回的响应内容进行检查和修改，修改完成后点击“执行”按钮即可将响应返回给客户端，浏览器会继续加载页面。
+        <br>
+        配置的时候可以同时勾选请求和响应，这样可以在请求发送前和响应返回前都进行检查和修改。
+        <br>
+        <img src="img/break/断点10.png">
+      </div>
+    </fieldset>
+  </div>
+</body>
+
+</html>

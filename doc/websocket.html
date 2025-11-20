@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Websocket</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="./css/frame.css">
+</head>
+
+<body>
+  <div class="jy-content">
+    <div class="jy-content-header">
+      <div class="jy-content-title">Websocket</div>
+    </div>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">功能</legend>
+      <div class="jy-field-box">
+        <blockquote>
+          Listen对Websocket调试提供了良好的支持，可以方便的对消息进行查看与搜索，并且可以直接对客户端或服务器发送消息。利用重写和脚本功能，甚至可以拦截和修改服务器或客户端发送的消息。
+        </blockquote>
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">消息查看</legend>
+      <div class="jy-field-box">
+        对于Websocket连接，双击打开详情面板，切换到Websocket选项卡中，即可实时查看服务端与客户端发送的消息。
+        <br />
+        <img src="img/websocket/ws1.png">
+        <br />
+        <br />
+        点击消息界面左上角的搜索按钮，可以打开搜索面板，进行消息搜索。点击服务端或者客户端的头像，可以发送消息。
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">消息调试</legend>
+      <div class="jy-field-box">
+        Listen 提供了两种方式来拦截和修改消息。
+        <br />
+        <br />
+        <span>1、使用<a href="/doc/rewrite.html" target="_blank">重写</a>功能，编辑规则对服务端或客户端发送的消息进行拦截和修改。</span>
+        <br />
+        <span>编写规则时可以选择对Websocket消息体进行替换或者修改。也可以选择是否对Websocket消息类型就行更改</span>
+        <img src="img/websocket/ws2.png">
+        <br />
+        <br />
+        <span>2、使用<a href="/doc/rewrite.html" target="_blank">脚本</a>功能，编写JavaScript代码，对服务端或客户端发送的消息进行更灵活的拦截和修改。</span>
+        <br />
+        <br />
+        脚本里可以定义两个方法：
+        <br />
+        <span style="font-weight: bold;">onSendMessage({body, bodyType, url, opCode})：</span>
+        在客户端发送消息到达服务器之前调用，返回的{opCode, body}为修改后的消息类型和消息体。
+        <br />
+        <span style="font-weight: bold;">onReceiveMessage({body, bodyType, url, opCode})：</span>
+        在服务器发送消息到达客户端之前调用，返回的{opCode, body}为修改后的消息类型和消息体。
+        <br />
+        <br />
+        两个方法的参数说明：
+        <br />
+        <span style="font-weight: bold;">body：</span>客户端或服务端发送的消息体，为一个字符串或Object对象或者Uint8Array对象。
+        <br />
+        <span style="font-weight: bold;">bodyType：</span>body的类型，可能的值为"string"、"json"、"uint8array"等。
+        <br />
+        <span style="font-weight: bold;">url：</span>请求的完整URL地址。
+        <br />
+        <span style="font-weight: bold;">opCode：</span>Websocket消息类型。
+        <br />
+        <br />
+        例：下面的脚本代码会在客户端发送到消息到达服务器之前将消息内容修改为“send message”。在服务器发送消息到达客户端之前，将消息内容修改为“receive message”。
+        <br />
+        <br />
+        <img src="img/websocket/ws3.png">
+      </div>
+    </fieldset>
+  </div>
+</body>
+
+</html>

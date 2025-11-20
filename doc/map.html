@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>映射</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="./css/frame.css">
+</head>
+
+<body>
+  <div class="jy-content">
+    <div class="jy-content-header">
+      <div class="jy-content-title">映射</div>
+    </div>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">功能</legend>
+      <div class="jy-field-box">
+        <blockquote>
+          映射功能可以将请求的URL会替换为指定的本地文件路径或者目录，从而实现对单个文件或整个网站的映射，方便前端开发调试。
+        </blockquote>
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">开启映射功能</legend>
+      <div class="jy-field-box">
+        将鼠标悬浮到映射图标上，点击“启动映射”按钮即可开启映射功能。
+        <br />
+        <img src="img/map/映射1.png">
+        <br />
+        <br />
+        开启后，映射图标会高亮显示，表示映射已开启。
+        <br />
+        <img src="img/map/映射2.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">新增映射规则</legend>
+      <div class="jy-field-box">
+        1、将鼠标悬浮到映射图标上，点击“规则管理”按钮打开映射规则列表。
+        <br />
+        <img src="img/map/映射3.png">
+        <br />
+        <br />
+        2、在规则列表弹框里，点击“+”按钮，打开新增规则弹窗。<br />
+        <img src="img/map/映射4.png">
+        <br />
+        <br />
+        3、在弹窗里，填写匹配规则、映射类型、映射目录/文件，点击“确定”按钮即可新增规则。
+        <br />
+        <img src="img/map/映射5.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">映射类型</legend>
+      <div class="jy-field-box">
+        映射类型可以选择映射文件或目录两种方式。
+        <br />
+        <span style="font-weight: bold;">映射文件：</span>请求的URL会替换为指定的本地文件路径，从而实现对单个文件的映射。
+        <br />
+        <span style="font-weight: bold;">映射目录：</span>请求的URL会替换为本地目录下对应的文件路径，从而实现对整个网站的映射。
+        <br />
+        <span style="font-weight: bold;">例：</span>
+        请求URL为http://example.com/js/app.js，映射文件时，本地文件配置为D:/webroot/app.js，则请求会映射为D:/webroot/app.js
+        <br />
+        <img src="img/map/映射5.png">
+        <br />
+        <br />
+        另外，映射类型选择映射文件时，支持使用正则表达式，从而实现更灵活的匹配方式。启用正则后，本地文件路径可以使用$1-$100来代替URL中的子匹配项。
+        <br />
+        <span style="font-weight: bold;">例：</span>
+        请求URL为http://example.com/js/app.js，映射文件配置为D:/webroot/$1.js，匹配规则为http://example\.com/js/([a-z0-9]+).js，则请求会映射为D:/webroot/app.js。
+        <br />
+        <img src="img/map/映射6.png">
+        <br />
+        <br />
+        <span style="font-weight: bold;">例：</span>
+        请求URL为http://example.com/js/app.js，映射目录时，本地目录配置为D:/webroot，则请求会映射为D:/webroot/js/app.js
+        <br />
+        <img src="img/map/映射7.png">
+      </div>
+    </fieldset>
+  </div>
+</body>
+
+</html>

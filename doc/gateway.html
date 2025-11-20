@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>网关</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="./css/frame.css">
+</head>
+
+<body>
+  <div class="jy-content">
+    <div class="jy-content-header">
+      <div class="jy-content-title">网关</div>
+    </div>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">功能</legend>
+      <div class="jy-field-box">
+        <blockquote>
+          网关功能可以对请求进行屏蔽和挂起，阻止请求发送到服务器，从而实现对某些请求的过滤和控制。
+        </blockquote>
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">开启网关功能</legend>
+      <div class="jy-field-box">
+        将鼠标悬浮到网关图标上，点击“启动网关”按钮即可开启网关功能。
+        <br />
+        <img src="img/gateway/网关1.png">
+        <br />
+        <br />
+        开启后，网关图标会高亮显示，表示网关已开启。
+        <br />
+        <img src="img/gateway/网关2.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">新增网关规则</legend>
+      <div class="jy-field-box">
+        1、将鼠标悬浮到网关图标上，点击“规则管理”按钮打开网关规则列表。
+        <br />
+        <img src="img/gateway/网关3.png">
+        <br />
+        <br />
+        2、在规则列表弹框里，点击“+”按钮，打开新增规则弹窗。
+        <br />
+        <img src="img/gateway/网关4.png">
+        <br />
+        <br />
+        3、在弹窗里，填写匹配规则、屏蔽方式，点击“确定”按钮即可新增规则。匹配规则支持wildcard。
+        <br />
+        <img src="img/gateway/网关5.png">
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">屏蔽方法</legend>
+      <div class="jy-field-box">
+        网关提供4种屏蔽方法：
+        <br />
+        <span style="font-weight: bold;">屏蔽请求</span>：直接阻止请求发送到服务器，客户端会收到连接失败的错误。
+        <br />
+        <span style="font-weight: bold;">屏蔽相应</span>：请求可以发送到服务器，但服务器的响应会被屏蔽，客户端会收到连接失败的错误。
+        <br />
+        <span style="font-weight: bold;">挂起请求</span>：请求不会发送到服务器，客户端会一直处于等待状态，直到超时。
+        <br />
+        <span style="font-weight: bold;">挂起响应</span>：请求会发送到服务器，但服务器的响应会被挂起，客户端会一直处于等待状态，直到超时。
+        <br />
+        <img src="img/gateway/网关6.png">
+      </div>
+    </fieldset>
+  </div>
+</body>
+
+</html>

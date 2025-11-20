@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>安装证书</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="./css/frame.css">
+</head>
+
+<body>
+  <div class="jy-content">
+    <div class="jy-content-header">
+      <div class="jy-content-title">安装证书</div>
+    </div>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">为何要按住证书？</legend>
+      <div class="jy-field-box">
+        <div>
+          Listen使用中间人（MITM）技术抓取和分析HTTPS流量，当客户端与代理服务器进行通信时，代理服务器需要重签远程服务器的SSL证书。为了保证客户端与代理服务器成功进行SSL握手通信，需要将代理服务器的根证书安装到客户端本地的证书管理中心。
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="jy-field" style="margin-top:50px;">
+      <legend style="margin-top:50px">如何安装证书</legend>
+      <div class="jy-field-box">
+        <div>
+          Listen提供了一键按住证书的功能，只需点击右上角的安装证书按钮即可自动安装证书到本地用户证书管理中心。
+        </div>
+        <img src="img/install_ssl/安装证书1.png">
+        <div>
+          <br />
+          安装成功后，SSL图标将高亮显示。
+        </div>
+        <img src="img/install_ssl/安装证书2.png">
+      </div>
+    </fieldset>
+  </div>
+</body>
+
+</html>
