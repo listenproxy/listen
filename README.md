@@ -6,7 +6,7 @@
 - [**`功能特性`**](#功能特性)
 - [**`使用`**](#使用)
 - [**`下载`**](#下载)
-- [**`历史版本`**](#功能特性)
+- [**`历史版本`**](#历史版本)
 
 
 ## 功能特性
@@ -41,4 +41,4 @@
 
 ## 历史版本
 
-See the GitHub [历史版本](https://github.com/wanls4583/listen/releases).
+See the GitHub [历史版本](https://github.com/listenproxy/listen/releases).
