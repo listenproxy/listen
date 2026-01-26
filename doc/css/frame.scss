@@ -1,42 +1,67 @@
+:root {
+    --primary-color: #00bcd4;
+    --body-color: #e1e1e1;
+    --strong-body-color: #fff;
+    --border-color: transparent;
+    --scrollbar-thumb-background: rgb(95, 113, 136);
+    --scrollbar-thumb-background-hover: rgb(153, 171, 193);
+    --scrollbar-thumb-background-active: rgb(131, 161, 197);
+}
+
 html,
 body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    font-size: 14px;
+    color: #e1e1e1;
+    overflow: auto;
+}
+
+* {
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--scrollbar-thumb-background);
+
+        &:hover {
+            background-color: var(--scrollbar-thumb-background-hover);
+        }
+
+        &:active {
+            background-color: var(--scrollbar-thumb-background-active);
+        }
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+}
+
+a {
+    color: var(--primary-color);
 }
 
 pre {
     white-space: pre;
 }
 
-pre code {
-    display: block;
-    padding: 1em;
-    background-color: #fafafa;
-    font-family: Consolas, Monaco, monospace;
-    *white-space: pre;
-    *word-wrap: break-word;
-}
-
 blockquote {
     margin: 10px 0;
     padding: 10px;
-    border-left: 5px solid #5FB878;
-    background-color: #fafafa;
+    border-left: 5px solid var(--primary-color);
+    background-color: #333;
+    border-radius: 0 4px 4px 0;
 }
 
-.property-table {
-
-    td,
-    th {
-        padding: 10px;
-        border: 1px solid #eeeeee;
-    }
-
-    th {
-        background-color: #f6f6f6;
-    }
+.bg {
+    background: radial-gradient(circle at 80% 20%, rgba(17, 75, 109, 0.3) 0%, transparent 40%), linear-gradient(to bottom right, #0c0e15, #141824);
 }
 
 .pad-10 {
@@ -52,15 +77,25 @@ blockquote {
 }
 
 .jy-field {
-    margin-bottom: 30px;
-    border: 1px solid #e1e1e1;
+    margin: 0 0 30px 0;
+    padding: 0 10px;
+    border: none;
+
+    legend {
+        padding: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--strong-body-color);
+    }
 }
 
 .jy-header {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     height: 60px;
     z-index: 3;
-    background-color: #393D49;
+    box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.5);
     *zoom: 1;
 
     .logo {
@@ -69,12 +104,10 @@ blockquote {
         justify-content: center;
         float: left;
         height: 100%;
-        // width: 160px;
-        // _width: 200px;
         padding: 0 20px;
         line-height: 60px;
         font-size: 26px;
-        color: #fff !important;
+        color: var(--strong-body-color) !important;
         text-decoration: none;
     }
 
@@ -89,16 +122,15 @@ blockquote {
     }
 
     .jy-header-right {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        height: 100%;
-        line-height: 60px;
-        padding-right: 50px;
-        *zoom: 1;
+        display: flex;
+        align-items: center;
 
-        .jy-menu-nav-horizontal li {
-            float: right;
+        .icon-github {
+            font-size: 40px;
+            line-height: 1em;
+            margin-right: 10px;
+            color: white !important;
+            text-decoration: none;
         }
     }
 }
@@ -108,27 +140,45 @@ blockquote {
     top: 60px;
     bottom: 0;
     left: 0;
-    width: 200px;
+    width: 268px;
+    border-right: 1px solid var(--border-color);
+    box-sizing: border-box;
     overflow: hidden;
-    background-color: #393D49;
 
     .jy-side-scroll {
         position: relative;
-        width: 220px;
+        width: calc(268px + 20px);
         height: 100%;
         overflow-y: auto;
     }
 
     .jy-menu-nav {
-        width: 200px;
+        width: 268px;
         padding: 0;
+        background-color: transparent;
+
+        a {
+            font-size: 16px;
+            transition: all 0.3s;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+
+        .jy-menu-checked {
+            background-color: transparent;
+            font-weight: bold;
+            font-size: 22px;
+            color: var(--primary-color);
+        }
     }
 }
 
 .jy-frame-container {
     position: absolute;
     top: 60px;
-    left: 200px;
+    left: 268px;
     right: 0;
     bottom: 0;
     overflow: hidden;
@@ -146,17 +196,15 @@ blockquote {
         }
 
         .jy-tab-header {
-            position: relative;
-            z-index: 1;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+            display: none;
         }
 
         .jy-tab-content {
             position: absolute;
-            top: 30px;
+            top: 0;
             bottom: 0;
             width: 100%;
+            margin-top: 0;
             box-sizing: border-box;
         }
 
@@ -173,11 +221,15 @@ blockquote {
     }
 }
 
+.jy-content-wrap {
+    display: flex;
+    padding: 0 100px;
+}
+
 .jy-content {
     position: relative;
     padding: 10px;
-    background: #fff;
-    max-width: 1300px;
+    width: 900px;
     *zoom: 1;
     line-height: 1.8em;
 
@@ -189,8 +241,6 @@ blockquote {
         width: 100%;
         height: 50px;
         line-height: 50px;
-        background-color: #fff;
-        border-bottom: 1px solid #e1e1e1;
         *zoom: 1;
 
         &:before,
@@ -209,11 +259,13 @@ blockquote {
     .jy-content-title {
         float: left;
         margin-left: 15px;
-        font-size: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: var(--strong-body-color);
     }
 
     .jy-field-box {
-        color: #333;
+        padding-top: 10px;
     }
 
     .jy-content-btns {
@@ -221,9 +273,6 @@ blockquote {
         margin-right: 15px;
     }
 
-    legend {
-        font-weight: bold;
-    }
 
     img {
         margin: 10px 0;

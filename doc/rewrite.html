@@ -9,127 +9,129 @@
 </head>
 
 <body>
-  <div class="jy-content">
-    <div class="jy-content-header">
-      <div class="jy-content-title">重写</div>
+  <div class="jy-content-wrap">
+    <div class="jy-content">
+      <div class="jy-content-header">
+        <div class="jy-content-title">重写</div>
+      </div>
+      <fieldset class="jy-field">
+        <legend style="margin-top:50px">功能</legend>
+        <div class="jy-field-box">
+          <blockquote>
+            重写功能可以使用事先创建好的规则在请求发送到服务器之前对请求进行修改，从而实现对请求的重写和调整。也可以在响应返回给客户端之前对响应进行修改，从而实现对响应的重写和调整。
+          </blockquote>
+        </div>
+      </fieldset>
+      <fieldset class="jy-field">
+        <legend style="margin-top:50px">开启重写功能</legend>
+        <div class="jy-field-box">
+          打开重写菜单，点击“启动重写”按钮即可开启重写功能。
+          <br />
+          <img src="img/rewrite/重写1.png">
+          <br />
+          <br />
+          开启后，重写菜单下面会有小绿点，表示重写功能已开启。
+          <br />
+          <img src="img/rewrite/重写2.png">
+        </div>
+      </fieldset>
+      <fieldset class="jy-field">
+        <legend style="margin-top:50px">新增重写规则</legend>
+        <div class="jy-field-box">
+          1、打开重写菜单，点击“管理规则”按钮打开重写规则列表。
+          <br />
+          <img src="img/rewrite/重写3.png">
+          <br />
+          <br />
+          2、在规则列表弹框里，点击“+”按钮，打开新增规则弹窗。<br />
+          <img src="img/rewrite/重写4.png">
+          <br />
+          <br />
+          3、在弹窗里，填写匹配规则、重写类型，点击“确定”按钮即可新增规则。
+          <br />
+          <img src="img/rewrite/重写5.png">
+        </div>
+      </fieldset>
+      <fieldset class="jy-field">
+        <legend style="margin-top:50px">修改请求</legend>
+        <div class="jy-field-box">
+          修改请求时可以对发送到服务器的请求进行新增参数、修改参数、删除参数、新增请求头、修改请求头、删除请求头、替换请求体、修改请求体等修改。
+          <br />
+          <br />
+          <span style="font-weight: bold;">新增参数：</span>在URL后面添加新的参数，格式为key=value。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/，下面的配置将会把URL修改为https://listen-proxy.com/?test=1。
+          <br />
+          <img src="img/rewrite/重写6.png">
+          <br />
+          <br />
+          <br />
+          <span style="font-weight: bold;">修改参数：</span>对URL参数进行匹配（支持正则表达式、忽略大小写），替换匹配到的参数的值。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/?test=1，下面的配置将会把URL修改为https://listen-proxy.com/?test=2。
+          <br />
+          <img src="img/rewrite/重写7.png">
+          <br />
+          <br />
+          <span style="font-weight: bold;">删除参数：</span>对URL参数进行匹配（支持正则表达式、忽略大小写），删除匹配到的参数和值。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/?test=1，下面的配置将会把URL修改为https://listen-proxy.com/。
+          <br />
+          <img src="img/rewrite/重写8.png">
+          <br />
+          <br />
+          <span style="font-weight: bold;">新增请求头：</span>添加新的请求头字段，格式为key: value。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/，下面的配置将会把请求头中添加"test_add_header: 1"。
+          <br />
+          <img src="img/rewrite/重写9.png">
+          <br />
+          <br />
+          <span style="font-weight: bold;">修改请求头：</span>对请求头字段进行匹配（支持正则表达式、忽略大小写），替换匹配到的字段的值。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/，下面的配置将会把请求头中"Accept-Language"字段的值修改为zh-CN。
+          <br />
+          <img src="img/rewrite/重写10.png">
+          <br />
+          <br />
+          <span style="font-weight: bold;">删除请求头：</span>对请求头字段进行匹配（支持正则表达式、忽略大小写），删除匹配到的字段和值。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/，下面的配置将会把请求头中"Accept-Language"字段删除。
+          <br />
+          <img src="img/rewrite/重写11.png">
+          <br />
+          <br />
+          <span style="font-weight: bold;">替换请求体：</span>将请求体替换为指定的内容，支持文本和文件。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/，下面的配置将会把请求体替换为"test replace body"。
+          <br />
+          <img src="img/rewrite/重写12.png">
+          <br />
+          <br />
+          <span style="font-weight: bold;">修改请求体：</span>对请求体进行文本匹配（支持正则表达式、忽略大小写），替换匹配到的文本。
+          <br />
+          <span style="font-weight: bold;">例：</span>
+          请求URL为https://listen-proxy.com/，请求体为{"test":1}，下面的配置将会把请求体修改为{"test1":1}。
+          <br />
+          <img src="img/rewrite/重写13.png">
+        </div>
+      </fieldset>
+      <fieldset class="jy-field">
+        <legend style="margin-top:50px">修改响应</legend>
+        <div class="jy-field-box">
+          修改响应时可以对服务器的响应进行新增请求头、修改请求头、删除请求头、替换请求体、修改请求体等修改。这些修改规则和修改请求的规则类似，只不过是针对响应进行的。
+          <br />
+          <img src="img/rewrite/重写14.png">
+        </div>
+      </fieldset>
     </div>
-    <fieldset class="jy-field" style="margin-top:50px;">
-      <legend style="margin-top:50px">功能</legend>
-      <div class="jy-field-box">
-        <blockquote>
-          重写功能可以使用事先创建好的规则在请求发送到服务器之前对请求进行修改，从而实现对请求的重写和调整。也可以在响应返回给客户端之前对响应进行修改，从而实现对响应的重写和调整。
-        </blockquote>
-      </div>
-    </fieldset>
-    <fieldset class="jy-field" style="margin-top:50px;">
-      <legend style="margin-top:50px">开启重写功能</legend>
-      <div class="jy-field-box">
-        打开重写菜单，点击“启动重写”按钮即可开启重写功能。
-        <br />
-        <img src="img/rewrite/重写1.png">
-        <br />
-        <br />
-        开启后，重写菜单下面会有小绿点，表示重写功能已开启。
-        <br />
-        <img src="img/rewrite/重写2.png">
-      </div>
-    </fieldset>
-    <fieldset class="jy-field" style="margin-top:50px;">
-      <legend style="margin-top:50px">新增重写规则</legend>
-      <div class="jy-field-box">
-        1、打开重写菜单，点击“管理规则”按钮打开重写规则列表。
-        <br />
-        <img src="img/rewrite/重写3.png">
-        <br />
-        <br />
-        2、在规则列表弹框里，点击“+”按钮，打开新增规则弹窗。<br />
-        <img src="img/rewrite/重写4.png">
-        <br />
-        <br />
-        3、在弹窗里，填写匹配规则、重写类型，点击“确定”按钮即可新增规则。
-        <br />
-        <img src="img/rewrite/重写5.png">
-      </div>
-    </fieldset>
-    <fieldset class="jy-field" style="margin-top:50px;">
-      <legend style="margin-top:50px">修改请求</legend>
-      <div class="jy-field-box">
-        修改请求时可以对发送到服务器的请求进行新增参数、修改参数、删除参数、新增请求头、修改请求头、删除请求头、替换请求体、修改请求体等修改。
-        <br />
-        <br />
-        <span style="font-weight: bold;">新增参数：</span>在URL后面添加新的参数，格式为key=value。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/，下面的配置将会把URL修改为https://listen-proxy.com/?test=1。
-        <br />
-        <img src="img/rewrite/重写6.png">
-        <br />
-        <br />
-        <br />
-        <span style="font-weight: bold;">修改参数：</span>对URL参数进行匹配（支持正则表达式、忽略大小写），替换匹配到的参数的值。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/?test=1，下面的配置将会把URL修改为https://listen-proxy.com/?test=2。
-        <br />
-        <img src="img/rewrite/重写7.png">
-        <br />
-        <br />
-        <span style="font-weight: bold;">删除参数：</span>对URL参数进行匹配（支持正则表达式、忽略大小写），删除匹配到的参数和值。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/?test=1，下面的配置将会把URL修改为https://listen-proxy.com/。
-        <br />
-        <img src="img/rewrite/重写8.png">
-        <br />
-        <br />
-        <span style="font-weight: bold;">新增请求头：</span>添加新的请求头字段，格式为key: value。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/，下面的配置将会把请求头中添加"test_add_header: 1"。
-        <br />
-        <img src="img/rewrite/重写9.png">
-        <br />
-        <br />
-        <span style="font-weight: bold;">修改请求头：</span>对请求头字段进行匹配（支持正则表达式、忽略大小写），替换匹配到的字段的值。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/，下面的配置将会把请求头中"Accept-Language"字段的值修改为zh-CN。
-        <br />
-        <img src="img/rewrite/重写10.png">
-        <br />
-        <br />
-        <span style="font-weight: bold;">删除请求头：</span>对请求头字段进行匹配（支持正则表达式、忽略大小写），删除匹配到的字段和值。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/，下面的配置将会把请求头中"Accept-Language"字段删除。
-        <br />
-        <img src="img/rewrite/重写11.png">
-        <br />
-        <br />
-        <span style="font-weight: bold;">替换请求体：</span>将请求体替换为指定的内容，支持文本和文件。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/，下面的配置将会把请求体替换为"test replace body"。
-        <br />
-        <img src="img/rewrite/重写12.png">
-        <br />
-        <br />
-        <span style="font-weight: bold;">修改请求体：</span>对请求体进行文本匹配（支持正则表达式、忽略大小写），替换匹配到的文本。
-        <br />
-        <span style="font-weight: bold;">例：</span>
-        请求URL为https://listen-proxy.com/，请求体为{"test":1}，下面的配置将会把请求体修改为{"test1":1}。
-        <br />
-        <img src="img/rewrite/重写13.png">
-      </div>
-    </fieldset>
-    <fieldset class="jy-field" style="margin-top:50px;">
-      <legend style="margin-top:50px">修改响应</legend>
-      <div class="jy-field-box">
-        修改响应时可以对服务器的响应进行新增请求头、修改请求头、删除请求头、替换请求体、修改请求体等修改。这些修改规则和修改请求的规则类似，只不过是针对响应进行的。
-        <br />
-        <img src="img/rewrite/重写14.png">
-      </div>
-    </fieldset>
   </div>
 </body>
 
