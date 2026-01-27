@@ -1,45 +1,48 @@
 # Listen
-> Listen 是是一款现代化的前端代理调试工具，提供请求修改、响应修改、API Mock 等功能，助你高效调试网络请求。
 
-## 内容
+[简体中文](./README_CN.md)
 
-- [**`功能特性`**](#功能特性)
-- [**`使用`**](#使用)
-- [**`下载`**](#下载)
-- [**`历史版本`**](#历史版本)
+> **Listen** is a modern frontend proxy debugging tool that provides features such as request modification, response modification, and API Mocking to help you debug network requests efficiently.
+
+## Contents
+
+- [**`Features`**](#features)
+- [**`Usage`**](#usage)
+- [**`Download`**](#download)
+- [**`Version History`**](#version-history)
 
 
-## 功能特性
+## Features
 
-### 请求代理
+### Request Proxy
 
-* [x] 映射功能：可以将服务器目录映射到本地目录
-* [x] 重写功能：使用事先创建的规则对请求和响应进行拦截和修改
-* [x] 断点功能：对请求和响应进行中断并修改
-* [x] 脚本功能：编写JavaScript代码对请求和响应进行编程式修改
-* [x] 网关功能：对请求进行屏蔽
-* [x] 镜像功能：对域名进行映射
-* [x] 网关代理：通过虚拟网卡路由模式（TUN模式），可以代理本机所有应用的HTTP请求
-* [x] 二级代理：将请求转发到其他服务器代理
-* [x] Websocket：支持Webscoket调试，可发送和修改websocket消息
+* [x] **Mapping**: Map server directories to local directories.
+* [x] **Rewriting**: Intercept and modify requests and responses using pre-defined rules.
+* [x] **Breakpoints**: Manually intercept and modify requests and responses.
+* [x] **Scripting**: Write JavaScript code for programmatic modification of requests and responses.
+* [x] **Gateway**: Block specific requests.
+* [x] **Mirroring**: Map domain names.
+* [x] **Gateway Proxy**: Proxy all HTTP requests from local applications using virtual network card (TUN mode) routing.
+* [x] **Secondary Proxy**: Forward requests to other proxy servers.
+* [x] **WebSocket**: Support WebSocket debugging, allowing you to send and modify messages.
 
 ![](img/请求代理.png?version=1.1.0)
 
-### 请求模拟
+### Request Simulation
 
-* [x] 请求模拟：构造任意HTTP/HTTPS请求
-* [x] 编辑&重发：配合请求代理功能，可以快速对捕获的请求进行二次修改和发送
+* [x] **Request Simulation**: Construct any HTTP/HTTPS request.
+* [x] **Edit & Resend**: Quickly modify and resend captured requests in coordination with the proxy feature.
 
 ![](img/请求模拟.png?version=1.1.0)
 
-## 使用
+## Usage
 
-[**`使用文档`**](https://listen-proxy.com/)
+[**`Documentation`**](https://listen-proxy.com/)
 
-## 下载
+## Download
 
-[**`软件下载`**](https://listen-proxy.com/)
+[**`Software Download`**](https://github.com/listenproxy/listen/releases/latest)
 
-## 历史版本
+## Version History
 
-See the GitHub [历史版本](https://github.com/listenproxy/listen/releases).
+See the GitHub [Version History](https://github.com/listenproxy/listen/releases).
