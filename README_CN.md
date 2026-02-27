@@ -26,14 +26,14 @@
 * [x] 二级代理：将请求转发到其他服务器代理
 * [x] Websocket：支持Webscoket调试，可发送和修改websocket消息
 
-![](img/请求代理.png?version=1.1.0)
+![](img/zh/请求代理.png?version=1.1.0)
 
 ### 请求模拟
 
 * [x] 请求模拟：构造任意HTTP/HTTPS请求
 * [x] 编辑&重发：配合请求代理功能，可以快速对捕获的请求进行二次修改和发送
 
-![](img/请求模拟.png?version=1.1.0)
+![](img/zh/请求模拟.png?version=1.1.0)
 
 ## 使用
 

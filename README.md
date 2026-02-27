@@ -26,14 +26,14 @@
 * [x] **Secondary Proxy**: Forward requests to other proxy servers.
 * [x] **WebSocket**: Support WebSocket debugging, allowing you to send and modify messages.
 
-![](img/请求代理.png?version=1.1.0)
+![](img/en/请求代理.png?version=1.1.0)
 
 ### Request Simulation
 
 * [x] **Request Simulation**: Construct any HTTP/HTTPS request.
 * [x] **Edit & Resend**: Quickly modify and resend captured requests in coordination with the proxy feature.
 
-![](img/请求模拟.png?version=1.1.0)
+![](img/en/请求模拟.png?version=1.1.0)
 
 ## Usage
 
