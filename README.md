@@ -22,7 +22,7 @@
 * [x] **Scripting**: Write JavaScript code for programmatic modification of requests and responses.
 * [x] **Gateway**: Block specific requests.
 * [x] **Mirroring**: Map domain names.
-* [x] **Gateway Proxy**: Proxy all HTTP requests from local applications using virtual network card (TUN mode) routing.
+* [x] **Tun Mode**: Proxy all HTTP requests from local applications using virtual network card (TUN mode) routing.
 * [x] **Secondary Proxy**: Forward requests to other proxy servers.
 * [x] **WebSocket**: Support WebSocket debugging, allowing you to send and modify messages.
 
